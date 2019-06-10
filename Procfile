@@ -1,1 +1,1 @@
-web: gunicorn bootcamp.wsgi --log-file -
+web: gunicorn payments.wsgi --log-file -
