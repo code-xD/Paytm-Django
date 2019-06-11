@@ -26,7 +26,7 @@ SECRET_KEY = '9q$ntg=n=j*w1n9i3hya-5so*8@!nl1#-z#u-o6-46tp$7k6s$'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Application definition
 
@@ -49,7 +49,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 )
 
 ROOT_URLCONF = 'payments.urls'
@@ -111,8 +110,6 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
-WHITENOISE_USE_FINDERS = True
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 PAYTM_MERCHANT_KEY = "bKMfNxPPf_QdZppa"
 PAYTM_MERCHANT_ID = "DIY12386817555501617"
